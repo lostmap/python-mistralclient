@@ -101,7 +101,8 @@ class HTTPClient(object):
                     self.ssl_options['verify'] = self.cacert
                 else:
                     self.ssl_options['verify'] = True
-
+		
+	    self.ssl_options['verify'] = False
             self.ssl_options['cert'] = (
                 kwargs.get(CERT_FILE),
                 kwargs.get(CERT_KEY)
